@@ -1,0 +1,57 @@
+
+body{
+    margin: 500px;
+}
+
+@keyframes dwarf-sprite {
+    from { background-position-x: 0px; }
+    to { background-position-x: -190px; }
+}
+.dwarf { 
+    height: 30px;
+    width: 40px;
+    background: url("dwarf.png");
+    animation: dwarf-sprite .7s steps(5) infinite;
+    scale: 5;
+}
+
+
+@keyframes dwarf-jump-sprite {
+    from { 
+        background-position-y: -66px; 
+        background-position-x: 0px; 
+    }
+    to { 
+        background-position-y: -66px; 
+        background-position-x: -266px; 
+    }
+}
+.dwarf-jump { 
+    height: 35px;
+    width: 35px;
+    background: url("dwarf.png");
+    animation: dwarf-jump-sprite .7s steps(7) infinite;
+    scale: 5;
+}
+
+@keyframes dwarf-slash-sprite {
+    from { 
+        background-position-y: -99px; 
+        background-position-x: 0px; 
+    }
+    to { 
+        background-position-y: -99px; 
+        background-position-x: -228px; 
+    }
+}
+.dwarf-slash { 
+    height: 35px;
+    width: 40px;
+    background: url("dwarf.png");
+    animation: dwarf-slash-sprite .7s steps(6) infinite;
+    scale: 5;
+}
+
+.left {
+    transform: scaleX(-1);
+}
