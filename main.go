@@ -7,29 +7,18 @@ import (
 )
 
 const (
-	screenWidth  = 500
-	screenHeight = 500
+	screenWidth      = 500
+	screenHeight     = 500
+	characterBoundry = 350
 )
 
 func main() {
 
-	// entities
-	registry := Registry{}
-	gopher := registry.NewEntity()
-
-	// components
-	gopher.AddComponent(&TransformComponent{PosY: 200, PosX: 200})
-	gopher.AddComponent(NewDwarf())
-
-	// systems
-	spriteRenderSystem := &SpriteRenderSystem{registry: &registry}
-
-	// the game implementing the ebiten.Game interface
-
 	ebiten.SetWindowSize(screenWidth, screenHeight)
 	ebiten.SetWindowTitle("Melee")
 	if err := ebiten.RunGame(&Game{
-		spriteRenderSystem: spriteRenderSystem,
+		Player: NewDwarf(),
+		Level:  NewForestLevel(),
 	}); err != nil {
 		log.Fatal(err)
 	}
