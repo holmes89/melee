@@ -1,5 +1,5 @@
 # melee
-WebRTC Game
+Game
 
 
 ## Resources
@@ -8,4 +8,5 @@ https://o-lobster.itch.io/platformmetroidvania-pixel-art-asset-pack
 
 
 ## Try
-- Compile and deploy using WASM, and try Web RTC
+- Compile and deploy using WASM for standalone
+- Try [flatbuffers](https://google.github.io/flatbuffers/flatbuffers_guide_use_go.html) for multiplayer
